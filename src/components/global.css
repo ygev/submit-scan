@@ -1,0 +1,20 @@
+:root {
+    /* Colors */
+    --greenLight: #42D576; 
+    --greenDark: #00290F; 
+    --black: #000; 
+    --white: #fff;
+
+    /* Glowies */
+    --medbayInner: 0px 0px 10px var(--greenLight), inset 0px 0px 10px #42D576;
+    --medbayOuter: 0px 0px 10px var(--greenLight);
+  }
+  
+  ::selection {
+    background: var(--greenLight);
+  }
+  
+  body {
+    background-color: var(--black);
+    color: var(--white);
+  }

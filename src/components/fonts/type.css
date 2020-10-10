@@ -1,0 +1,87 @@
+/* Font Import */
+
+@font-face {
+    font-family: 'Joffrey';
+    src: url('in_your_face_joffrey-webfont.woff2') format('woff2'),
+         url('in_your_face_joffrey-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'INET';
+    src: url('cc_red_alert_inet-webfont.woff2') format('woff2'),
+         url('cc_red_alert_inet-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LAN';
+    src: url('cc_red_alert_lan-webfont.woff2') format('woff2'),
+         url('cc_red_alert_lan-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ----MOBILE---- */
+
+/* Lead */
+h1 {
+    font-family: "Joffrey";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 65px;
+    text-align: center;
+    text-shadow: var(--medbayOuter);
+}
+
+/* Head */
+h2 {
+    font-family: "LAN";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Button */
+h3 {
+    font-family: "LAN";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* inputLabel */
+h4 {
+    font-family: "LAN";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+/* inputField */
+p {
+    font-family: "INET";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
