@@ -22,6 +22,7 @@ button {
     justify-items: center;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 
 .button__default {
@@ -61,14 +62,30 @@ button {
         height: 100vh;
         position: sticky;
         top: 0;
+        width: 50vw;
+    }
+
+    .nav__txt {
+        margin-top: 0;
+        margin-bottom: 50px;
     }
 
     .buttonLine__wrapper {
         flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+
+    button {
+        width: 190px;
+        height: 64px;
     }
 
     .buttonLine {
+        position: absolute;
         height: 1px;
-        width: 30px;
+        width: 50%;
+        left: 50%;
     }
   }
