@@ -2,7 +2,6 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
 }
 
 .inputLine__wrapper {
@@ -94,9 +93,6 @@ input:focus {
     .inputLine__wrapper {
         width: 100%;
         position: relative;
-        /* flex-direction: row; */
-        /* justify-content: flex-start; */
-        /* align-items: center; */
     }
 
     /* Line */

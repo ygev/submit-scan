@@ -11,7 +11,7 @@ export default (props) => (
                         <input className="inputField input--default" type="text" name="criterion" required
                             minlength="1" maxlength="5" placeholder="XXXXX"></input>
                     </div>
-                    <div className={ (props.line ? "input__line" : "")}>
+                    <div className="input__line">
                     </div>
                 </div>
             </>
