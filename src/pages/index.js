@@ -5,7 +5,7 @@ import Footer from "../components/footer/footer"
 import SEO from "../components/seo"
 
 class IndexPage extends React.Component {
-
+// TODO make an function that makes <Input> with criteria being cycled through, maybe make line inline css
 
   render() {
     return (
