@@ -52,3 +52,23 @@ button {
     height: 70px;
     background-color: var(--white);
 }
+
+/* ---DESKTOP--- */
+@media only screen and (min-width: 768px){
+    nav {
+        border-right: 1px var(--white) solid;
+        grid-column: 1;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .buttonLine__wrapper {
+        flex-direction: row;
+    }
+
+    .buttonLine {
+        height: 1px;
+        width: 30px;
+    }
+  }

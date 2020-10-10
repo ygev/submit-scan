@@ -18,3 +18,13 @@
     background-color: var(--black);
     color: var(--white);
   }
+
+  .flexer {
+    display: grid;
+  }
+
+
+/* ---DESKTOP--- */
+@media only screen and (min-width: 768px){
+
+}
