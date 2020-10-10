@@ -5,9 +5,17 @@ aside {
     margin-bottom: 50px;
 }
 
-.input__wrapper {
-    border: 1px var(--white) solid;
+.inputLine__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
+}
+
+.input__wrapper {
+    background-color: var(--black);
+    border: 1px var(--white) solid;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,5 +81,30 @@ input:focus {
     aside {
         grid-column: 2;
         width: 50vw;
+        padding-top: 5vh;
+        padding-bottom: 2vh;
+    }
+
+    .input__wrapper {
+        max-width: 50%;
+        z-index: 2;
+        margin-bottom: 20px;
+    }
+
+    .inputLine__wrapper {
+        width: 100%;
+        position: relative;
+        /* flex-direction: row; */
+        /* justify-content: flex-start; */
+        /* align-items: center; */
+    }
+
+    /* Line */
+    .input__line {
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        left: 0;
+        top: calc(65% - 20px);
     }
 }

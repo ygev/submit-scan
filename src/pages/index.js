@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
             <Input criterion="Impostor Kill Wins" line="true"/>
             <Input criterion="Sabotage Wins" line="true"/>
             <Input criterion="Crewmate Vote Wins" line="true"/>
-            <Input criterion="Crewmate Task Wins"/>
+            <Input criterion="Crewmate Task Wins" line="true"/>
           </aside>
         </div>
         <Footer />

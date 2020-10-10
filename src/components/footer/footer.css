@@ -17,6 +17,7 @@ footer {
     color: var(--black);
     position: sticky;
     bottom: 0;
+    z-index: 3;
 }
 
 .footer__link,
