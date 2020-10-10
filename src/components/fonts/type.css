@@ -32,7 +32,7 @@ h1 {
     font-style: normal;
     font-weight: 500;
     font-size: 60px;
-    line-height: 65px;
+    line-height: 72px;
     text-align: center;
     text-shadow: var(--medbayOuter);
 }
@@ -74,7 +74,7 @@ h4 {
 }
 
 /* inputField */
-p {
+p, .inputField {
     font-family: "INET";
     font-style: normal;
     font-weight: normal;

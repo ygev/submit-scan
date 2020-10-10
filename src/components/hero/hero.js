@@ -7,15 +7,20 @@ import "../fonts/type.css"
 class Hero extends React.Component {
     render() {
         return (
-    <>
-        <nav>
-            <h1>Submit Scan</h1>
-            <h2>Among Us Diagnostics</h2>
-            <button>Enter Data</button>
-        </nav>
-    </>
-  );
-}
+            <>
+                <nav>
+                    <section className="nav__txt">
+                        <h1>Submit Scan</h1>
+                        <h2>Among Us Diagnostics</h2>
+                    </section>
+                    <section className="buttonLine__wrapper">
+                        <button type="submit" className="button__default"><h3>Enter Data</h3></button>
+                        <div className="buttonLine"></div>
+                    </section>
+                </nav>
+            </>
+        );
+    }
 }
 
 export default Hero
