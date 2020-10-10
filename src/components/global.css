@@ -23,8 +23,10 @@
     display: grid;
   }
 
+  .glowOuter {
+    box-shadow: var(--medbayOuter)
+  }
 
-/* ---DESKTOP--- */
-@media only screen and (min-width: 768px){
-
-}
+  .glowInner {
+    box-shadow:var(--medbayInner)
+  }
