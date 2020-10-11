@@ -7,7 +7,7 @@ import "./footer.css"
 export default (props) => (
             <>  
                 <footer>
-                    <span>2020 ·&nbsp;Among Us ·&nbsp;</span><a className="footer__link" target= "_blank" rel="noreferrer" href="https://github.com/ygev/submit-scan"> GitHub Repo</a>
+                    <span>2020 ·&nbsp;Among Us property of InnerSloth·&nbsp;</span>
                 </footer>
             </>
         );
