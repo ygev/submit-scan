@@ -22,6 +22,7 @@ aside {
     border-radius: 100px;
     padding-left: 20px;
     box-sizing: border-box;
+    transition: var(--transGlow);
 }
 
 input {
@@ -52,6 +53,7 @@ input:focus {
 .input--default:focus {
     background: var(--white);
     color: var(--black);
+    transition: var(--transGlow);
 }
 
 /* Filled Input */
@@ -59,12 +61,14 @@ input:focus {
     text-shadow: var(--medbayOuter);
     background: var(--greenDark);
     box-shadow: var(--medbayInner);
+    transition: var(--transGlow);
 }
 
 .input--filled, .input--filled:focus {
     background: var(--greenLight);
     color: var(--black);
     box-shadow: var(--medbayOuter);
+    transition: var(--transGlow);
 }
 
 /* Line */
@@ -72,7 +76,15 @@ input:focus {
     width: 1px;
     height: 20px;
     background-color: var(--white);
+    transition: var(--transGlow);
 }
+
+input:valid {
+    background-color: var(--greenLight);
+    box-shadow: var(--medbayOuter);
+    transition: var(--transGlow);
+  }
+
 
 
 /* ---DESKTOP--- */

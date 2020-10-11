@@ -8,25 +8,40 @@
     /* Glowies */
     --medbayInner: 0px 0px 10px var(--greenLight), inset 0px 0px 10px #42D576;
     --medbayOuter: 0px 0px 10px var(--greenLight);
+    --transGlow: 100ms ease-in-out;
   }
   
-  ::selection {
-    background: var(--greenLight);
-  }
-  
-  body {
-    background-color: var(--black);
-    color: var(--white);
-  }
+::selection {
+  background: var(--greenLight);
+}
 
-  .flexer {
-    display: grid;
-  }
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
 
-  .glowOuter {
-    box-shadow: var(--medbayOuter)
-  }
+.flexer {
+  display: grid;
+}
 
-  .glowInner {
-    box-shadow:var(--medbayInner)
-  }
+.glowOuter {
+  box-shadow: var(--medbayOuter);
+  transition: 
+}
+
+.glowInner {
+  box-shadow:var(--medbayInner);
+  transition: var(--transGlow);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
