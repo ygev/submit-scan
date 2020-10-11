@@ -27,18 +27,21 @@ button {
 
 .button__default {
     background: var(--black);
+    cursor: not-allowed;
 }
 
 .button__green {
     background: var(--greenLight);
     color: var(--black);
     box-shadow: var(--medbayOuter);
+    cursor: pointer;
 }
 
 .button__white {
     background: var(--white);
     color: var(--black);
     box-shadow: var(--medbayOuter);
+    cursor: pointer;
 }
 
 .buttonLine__wrapper {
