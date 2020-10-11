@@ -34,6 +34,11 @@ body {
   transition: var(--transGlow);
 }
 
+.greenBorderRight {
+  border-right: 1px var(--greenLight) solid;
+  transition: var(--transGlow);
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

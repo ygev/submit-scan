@@ -14,7 +14,7 @@ class Hero extends React.Component {
                         <h2>Among Us Diagnostics</h2>
                     </section>
                     <section className="buttonLine__wrapper">
-                        <button type="submit" className="button__default"><h3>Enter Data</h3></button>
+                        <button disabled type="submit" className="button__default"><h3>Enter Data</h3></button>
                         <div className="buttonLine"></div>
                     </section>
                 </nav>

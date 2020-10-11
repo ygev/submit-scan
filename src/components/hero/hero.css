@@ -23,18 +23,36 @@ button {
     align-items: center;
     justify-content: center;
     z-index: 2;
+    transition: var(--transGlow);
 }
 
 .button__default {
     background: var(--black);
     cursor: not-allowed;
+    transition: var(--transGlow);
 }
 
 .button__green {
     background: var(--greenLight);
     color: var(--black);
     box-shadow: var(--medbayOuter);
+    border: 1px var(--white) solid;
     cursor: pointer;
+    transition: var(--transGlow);
+}
+
+.button__green:hover {
+    background: var(--greenDark);
+    color: var(--white);
+    box-shadow: 0px 0px 50px 10px var(--greenDark), var(--medbayInner);
+    transition: var(--transGlow);
+}
+
+.button__green:active {
+    background: var(--white);
+    color: var(--black);
+    box-shadow: var(--medbayOuter);
+    transition: var(--transGlow);
 }
 
 .button__white {
@@ -42,6 +60,7 @@ button {
     color: var(--black);
     box-shadow: var(--medbayOuter);
     cursor: pointer;
+    transition: var(--transGlow);
 }
 
 .buttonLine__wrapper {
@@ -55,6 +74,7 @@ button {
     width: 1px;
     height: 70px;
     background-color: var(--white);
+    transition: var(--transGlow);
 }
 
 /* ---DESKTOP--- */
@@ -66,6 +86,7 @@ button {
         position: sticky;
         top: 0;
         width: 50vw;
+        transition: var(--transGlow);
     }
 
     .nav__txt {
