@@ -35,7 +35,7 @@ export default (props) => (
                     <div className="input__wrapper">
                         <label htmlFor="criterion"><h4>{props.criterion}</h4></label>
                         <input onBlur={colorGreen} className="inputField input--default" type="number" name="criterion" required
-                            minLength="1" maxLength="5" placeholder="XXXXX"></input>
+                            minLength="1" maxLength="5" placeholder="EMPTY"></input>
                     </div>
                     <div className="input__line">
                     </div>
