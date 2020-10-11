@@ -1,5 +1,5 @@
 module.exports = {
-  patchPrefix: "/submit-scan",
+  pathPrefix: "/submit-scan",
   siteMetadata: {
     title: `Among Us Statistics and Diagnosis`,
     description: `Input your Among Us statistics and receive a diagnosis on what kind of player you are.`,
