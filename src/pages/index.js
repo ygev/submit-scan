@@ -10,6 +10,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <>
+        <canvas id="myChart" width="400" height="400"></canvas>
         <SEO title="Submit Scan" />
         <div className="flexer">
           <Hero />

@@ -4,12 +4,204 @@ import "../reset.css";
 import "./input.css"
 import "../fonts/type.css"
 
+const updateRadarChart = function() {
+    var Chart = require('chart.js');
+    var ctx = document.getElementById('myChart').getContext('2d');
+    let playerData = {
+      bodiesReported: 0,
+      emergenciesCalled: 1,
+      tasksCompleted: 3,
+      allTasksCompleted: 1,
+      sabotagesFixed: 1.5,
+      imposterKills: 2,
+      timesMurdered: 1,
+      timesEjected: 1,
+      crewmateStreak: 1,
+      timesImposter: 1,
+      timesCrewmate: 1,
+      gamesStarted: 2,
+      gamesFinished: 2,
+      imposterVoteWins: 0.25,
+      imposterKillWins: 0,
+      imposterSabotageWins: 0,
+      crewmateVoteWins: 1,
+      crewmateTaskWins: 0,
+      
+      graphLabels: ['Big Brain', 'Trustworthy', 'Deadly', 'Handy', 'Proactive'],
+      graphMin:1,
+      graphMax:100,
+      graphStats: [1, 1, 1, 1, 1],
+      //getters
+       getCrewmateWinPercentage: function() {
+        return ((this.crewmateVoteWins + this.crewmateTaskWins) / (this.timesCrewmate) * 100);
+      },
+      
+      getImposterWinPercentage: function() {
+        return ((this.imposterVoteWins + this.imposterKillWins + this.imposterSabotageWins) / (this.timesImposter) * 100);
+      },
+      
+      getEjectionPercentage: function() {
+        return ((this.timesEjected / this.gamesStarted) * 100)
+      },
+      
+      imposterKillRatio: function() {
+        return (this.imposterKills/this.timesImposter)
+      },
+      
+      getEmergenciesCalledWeight: function() {
+        return Math.min(( ((this.emergenciesCalled / this.gamesStarted) * 100) * 4), this.graphMax)
+      },
+      
+      getBodiesReportedWeight: function() {
+        // const maxPercentage = 35;
+        const bodiesReportedMult = (100 / 35);
+        return Math.min( ( ((this.bodiesReported / this.gamesStarted) * 100) * bodiesReportedMult), this.graphMax);
+      },
+        
+      // level calculators
+      // min 0.0 k/d, max 3.0 k/d
+      
+      getProactiveLevel: function() {
+        const finalProactiveLevel = (this.getEmergenciesCalledWeight() * 0.75) + (this.getBodiesReportedWeight() * 0.25);
+        console.log("finalProactiveLevel");
+        console.log(finalProactiveLevel);
+        this.graphStats[4] = Math.min(finalProactiveLevel, this.graphMax);
+      },
+        
+      getDeadlyLevel: function() {
+        this.graphStats[2] = Math.min((this.imposterKillRatio() * 33.3), this.graphMax);
+        return this.graphStats[2];
+      },
+      
+      getSabotageFixWeight: function() {
+        const finalFixPercent = ((this.sabotagesFixed / this.gamesStarted) * 100);
+        console.log("finalFixPercent");
+        console.log(finalFixPercent);
+        return Math.min(finalFixPercent, this.graphMax);
+      },
+      
+      getTasksFinishedWeight: function() {
+        const averageTasksCompleted = 3;
+        return Math.min(( ( (this.tasksCompleted/averageTasksCompleted) / this.timesCrewmate) * 100), this.graphMax);
+      },
+      
+      getHandyLevel: function() {
+        //sabotageFixWeight * 0.7 + tasksFinishedWeight 0.3
+        this.graphStats[3] = ((this.getSabotageFixWeight() * 0.7) + (this.getTasksFinishedWeight() * 0.3));
+        console.log("handyLevel");
+        console.log(this.graphStats[3]);
+        return this.graphStats[3];  
+      },
+      
+      getBigBrainLevel: function() {
+        const maxPercentage = 75;
+        const scaleFactor = (100 / maxPercentage);
+        let finalCrewmateWeight = this.getCrewmateWinPercentage() >= maxPercentage ? maxPercentage : this.getCrewmateWinPercentage();
+        let finalImposterWeight = this.getImposterWinPercentage() >= maxPercentage ? maxPercentage : this.getImposterWinPercentage();
+        
+        finalCrewmateWeight = finalCrewmateWeight * scaleFactor;
+        finalImposterWeight = finalImposterWeight * scaleFactor;
+        console.log("finalCrewmateWeight");
+        console.log(finalCrewmateWeight);
+        console.log("finalImposterWeight");
+        console.log(finalImposterWeight);
+
+        this.graphStats[0] = (finalCrewmateWeight * 0.5) + (finalImposterWeight * 0.5);
+        return this.graphStats[0];
+      },
+      
+      getTrustLevel: function() {
+        // const maxPercentage = 75;
+        // const scaleFactor = (100 / maxPercentage);
+        // const timesImposterPercentage = ((this.timesImposter / this.gamesStarted) * 100);
+        // const timesImposterWeight = timesImposterPercentage >= maxPercentage ? maxPercentage : timesImposterPercentage; 
+        const finalTrustLevel = ( (this.getCrewmateWinPercentage() * 1.1) );
+        this.graphStats[1] = Math.min(finalTrustLevel, this.graphMax);
+        return this.graphStats[0];
+      },
+      
+      //mutaters
+      // updateBodiesReported: function() {
+      //   this.bodiesReported = Number(document.getElementById("bodiesReported").value) || 0;
+      //   console.log("this.bodiesReported");
+      //   console.log(this.bodiesReported);
+      //   document.getElementById("bodiesReportedSpan").innerText = this.bodiesReported;
+      // },
+      
+      // updateCrewmateWinSpan : function() {
+      //   document.getElementById("CrewmateWinPercentSpan").innerText = this.getCrewmateWinPercentage();
+      // },
+      
+      // updateImposterWinSpan : function() {
+      //   document.getElementById("ImposterWinPercentSpan").innerText = this.getCrewmateWinPercentage();
+      // },
+      
+      updateGraph: function(){
+        const testData = {
+        labels: this.graphLabels,
+        datasets: [
+          {
+            data: this.graphStats,
+            backgroundColor: 'rgba(37, 193, 110, 0.5)',
+            borderColor:'rgba(37, 193, 110, 1)',
+            lineTension: 0.05,
+            label:"Player Stats",
+            pointBackgroundColor: 'white'
+          }
+        ]
+        }
+        const testOptions = {
+            scale: {
+                gridLines: {
+                  display: true,
+                  circular: false,
+                  color:'rgba(37, 193, 110, 0.75)',
+                },
+                angleLines: {
+                    display: false
+                },
+                ticks: {
+                    display: false,
+                    suggestedMin: this.graphMin,
+                    suggestedMax: this.graphMax
+                }
+            },
+          borderColor: 'rgba(0.5,0,0,0.1)'
+        };
+        const myRadarChart = new Chart(ctx, {
+            type: 'radar',
+            data: testData,
+            options: testOptions
+        });
+      },
+      
+      updateAndDrawData: function(){
+        this.getProactiveLevel();
+        this.getDeadlyLevel();
+        this.getBigBrainLevel();
+        this.getTrustLevel();
+        this.getHandyLevel();
+        this.updateGraph();
+      }
+    };
+
+    const updatePlayerData = function(){
+      playerData.updateAndDrawData();
+    }
+
+    updatePlayerData();
+};
+
+function updatePage() {
+    updateRadarChart()
+    colorGreen();
+}
 
 function colorGreen() {
     var allValid = true;
     for (var i = 0; i < 18; i++) {
-        var inputs = document.getElementsByTagName('input')[i];
-        if(inputs.checkValidity() === true){
+        var input = document.getElementsByTagName('input')[i];
+        if(input.checkValidity() === true){
             console.log("onBlur Running")
             document.getElementsByClassName("input__wrapper")[i].classList.add("input__wrapper--filled");
             document.getElementsByClassName("input--default")[i].classList.add("input--filled");
@@ -18,27 +210,25 @@ function colorGreen() {
             allValid = false;
         }
     }
-    if (allValid == true) {
+    if (allValid === true) {
         console.log("all is valid")
-        document.getElementsByTagName("nav")[0].classList.add("glowOuter");
-        document.getElementsByTagName("nav")[0].classList.add("greenBorderRight");
+        document.getElementsByTagName("nav")[0].classList.add("glowOuter", "greenBorderRight");
         document.getElementsByClassName("buttonLine")[0].classList.add("glowInner");
-        document.getElementsByTagName("button")[0].classList.add("button__green");
-        document.getElementsByTagName("button")[0].classList.remove("button__default");
+        document.getElementsByTagName("button")[0].classList.add("button__green", "button__default");
         document.getElementsByTagName("h3")[0].innerHTML = "Diagnose";
     }
 }
 
 export default (props) => (
-            <>  
-            <div className="inputLine__wrapper">
-                    <div className="input__wrapper">
-                        <label htmlFor="criterion"><h4>{props.criterion}</h4></label>
-                        <input onBlur={colorGreen} className="inputField input--default" type="number" name="criterion" required
-                            minLength="1" maxLength="5" placeholder="EMPTY"></input>
-                    </div>
-                    <div className="input__line">
-                    </div>
-                </div>
-            </>
-        );
+    <>
+    <div className="inputLine__wrapper">
+        <div className="input__wrapper">
+            <label htmlFor="criterion"><h4>{props.criterion}</h4></label>
+            <input onBlur={updatePage} id={props.criterion} className="inputField input--default" type="number" name="criterion" required
+                minLength="1" maxLength="5" placeholder="EMPTY"></input>
+        </div>
+        <div className="input__line">
+        </div>
+    </div>
+    </>
+);
