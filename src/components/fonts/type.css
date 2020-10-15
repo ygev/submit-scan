@@ -68,6 +68,7 @@ h4 {
     font-weight: normal;
     font-size: 14px;
     line-height: 14px;
+    letter-spacing: 1.33px;
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -78,7 +79,7 @@ p, .inputField {
     font-family: "INET";
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 24px;
     display: flex;
     align-items: center;
@@ -109,7 +110,7 @@ p, .inputField {
 
     /* Lead */
     h4 {
-        font-size: 16px;
-        line-height: 16px;
+        font-size: 12px;
+        line-height: 14px;
     }
 }

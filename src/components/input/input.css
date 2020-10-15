@@ -97,10 +97,10 @@ input:valid {
     }
 
     .input__wrapper {
-        max-width: 50%;
+        max-width: 360px;
         z-index: 2;
-        margin-bottom: 20px;
-        /* height: 40px; */
+        margin-bottom: 10px;
+        height: 32px;
     }
 
     .inputLine__wrapper {
