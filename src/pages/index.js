@@ -15,24 +15,25 @@ class IndexPage extends React.Component {
         <div className="flexer">
           <Hero />
           <aside>
-            <Input criterion="Bodies Reported"/>
-            <Input criterion="Emergencies Called"/>
-            <Input criterion="Tasks Completed" />
-            <Input criterion="All Tasks Completed" />
-            <Input criterion="Sabotages Fixed" />
-            <Input criterion="Impostor Kills"/>
-            <Input criterion="Times Murdered" />
-            <Input criterion="Times Ejected"/>
-            <Input criterion="Crewmate Streak"/>
-            <Input criterion="Times Impostor"/>
-            <Input criterion="Times Crewmate"/>
-            <Input criterion="Games Started"/>
-            <Input criterion="Games Finished"/>
-            <Input criterion="Impostor Vote Wins"/>
-            <Input criterion="Impostor Kill Wins"/>
-            <Input criterion="Sabotage Wins"/>
-            <Input criterion="Crewmate Vote Wins"/>
-            <Input criterion="Crewmate Task Wins"/>
+            <Input id="bodiesReported" criterion="Bodies Reported"/>
+            <Input id="emergenciesCalled" criterion="Emergencies Called"/>
+            <Input id="tasksCompleted" criterion="Tasks Completed" />
+            <Input id="allTasksCompleted" criterion="All Tasks Completed" />
+            <Input id="sabotagesFixed" criterion="Sabotages Fixed" />
+            <Input id="imposterKills" criterion="Impostor Kills"/>
+            <Input id="timesMurdered" criterion="Times Murdered" />
+            <Input id="timesEjected" criterion="Times Ejected"/>
+            <Input id="crewmateStreak" criterion="Crewmate Streak"/>
+            <Input id="timesImposter" criterion="Times Impostor"/>
+            <Input id="timesCrewmate" criterion="Times Crewmate"/>
+            <Input id="gamesStarted" criterion="Games Started"/>
+            <Input id="gamesFinished" criterion="Games Finished"/>
+            <Input id="imposterVoteWins" criterion="Impostor Vote Wins"/>
+            <Input id="imposterKillWins" criterion="Impostor Kill Wins"/>
+            <Input id="imposterSabotageWins" criterion="Impostor Sabotage Wins"/>
+            <Input id="sabotageWins" criterion="Sabotage Wins"/>
+            <Input id="crewmateVoteWins" criterion="Crewmate Vote Wins"/>
+            <Input id="crewmateTaskWins" criterion="Crewmate Task Wins"/>
           </aside>
         </div>
         <Footer />
