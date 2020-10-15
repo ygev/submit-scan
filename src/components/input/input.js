@@ -8,24 +8,24 @@ const updateRadarChart = function() {
     var Chart = require('chart.js');
     var ctx = document.getElementById('myChart').getContext('2d');
     let playerData = {
-      bodiesReported: 0,
-      emergenciesCalled: 1,
-      tasksCompleted: 3,
-      allTasksCompleted: 1,
-      sabotagesFixed: 1.5,
-      imposterKills: 2,
-      timesMurdered: 1,
-      timesEjected: 1,
-      crewmateStreak: 1,
-      timesImposter: 1,
-      timesCrewmate: 1,
-      gamesStarted: 2,
-      gamesFinished: 2,
-      imposterVoteWins: 0.25,
-      imposterKillWins: 0,
-      imposterSabotageWins: 0,
-      crewmateVoteWins: 1,
-      crewmateTaskWins: 0,
+      bodiesReported: Number(document.getElementById("bodiesReported").value) || 0,
+      emergenciesCalled: Number(document.getElementById("emergenciesCalled").value) || 0,
+      tasksCompleted: Number(document.getElementById("tasksCompleted").value) || 0,
+      allTasksCompleted: Number(document.getElementById("allTasksCompleted").value) || 0,
+      sabotagesFixed: Number(document.getElementById("sabotagesFixed").value) || 0,
+      imposterKills: Number(document.getElementById("imposterKills").value) || 0,
+      timesMurdered: Number(document.getElementById("timesMurdered").value) || 0,
+      timesEjected: Number(document.getElementById("timesEjected").value) || 0,
+      crewmateStreak: Number(document.getElementById("crewmateStreak").value) || 0,
+      timesImposter: Number(document.getElementById("timesImposter").value) || 1,
+      timesCrewmate: Number(document.getElementById("timesCrewmate").value) || 1,
+      gamesStarted: Number(document.getElementById("gamesStarted").value) || 2,
+      gamesFinished: Number(document.getElementById("gamesFinished").value) || 2,
+      imposterVoteWins: Number(document.getElementById("imposterVoteWins").value) || 0,
+      imposterKillWins: Number(document.getElementById("sabotageWins").value) || 0,
+      imposterSabotageWins: Number(document.getElementById("imposterSabotageWins").value) || 0,
+      crewmateVoteWins: Number(document.getElementById("crewmateVoteWins").value) || 0,
+      crewmateTaskWins: Number(document.getElementById("crewmateTaskWins").value) || 0,
       
       graphLabels: ['Big Brain', 'Trustworthy', 'Deadly', 'Handy', 'Proactive'],
       graphMin:1,
@@ -58,9 +58,6 @@ const updateRadarChart = function() {
         return Math.min( ( ((this.bodiesReported / this.gamesStarted) * 100) * bodiesReportedMult), this.graphMax);
       },
         
-      // level calculators
-      // min 0.0 k/d, max 3.0 k/d
-      
       getProactiveLevel: function() {
         const finalProactiveLevel = (this.getEmergenciesCalledWeight() * 0.75) + (this.getBodiesReportedWeight() * 0.25);
         console.log("finalProactiveLevel");
@@ -119,22 +116,6 @@ const updateRadarChart = function() {
         this.graphStats[1] = Math.min(finalTrustLevel, this.graphMax);
         return this.graphStats[0];
       },
-      
-      //mutaters
-      // updateBodiesReported: function() {
-      //   this.bodiesReported = Number(document.getElementById("bodiesReported").value) || 0;
-      //   console.log("this.bodiesReported");
-      //   console.log(this.bodiesReported);
-      //   document.getElementById("bodiesReportedSpan").innerText = this.bodiesReported;
-      // },
-      
-      // updateCrewmateWinSpan : function() {
-      //   document.getElementById("CrewmateWinPercentSpan").innerText = this.getCrewmateWinPercentage();
-      // },
-      
-      // updateImposterWinSpan : function() {
-      //   document.getElementById("ImposterWinPercentSpan").innerText = this.getCrewmateWinPercentage();
-      // },
       
       updateGraph: function(){
         const testData = {
@@ -199,7 +180,7 @@ function updatePage() {
 
 function colorGreen() {
     var allValid = true;
-    for (var i = 0; i < 18; i++) {
+    for (var i = 0; i < 19; i++) {
         var input = document.getElementsByTagName('input')[i];
         if(input.checkValidity() === true){
             console.log("onBlur Running")
@@ -224,7 +205,7 @@ export default (props) => (
     <div className="inputLine__wrapper">
         <div className="input__wrapper">
             <label htmlFor="criterion"><h4>{props.criterion}</h4></label>
-            <input onBlur={updatePage} id={props.criterion} className="inputField input--default" type="number" name="criterion" required
+            <input onBlur={updatePage} id={props.id} className="inputField input--default" type="number" name="criterion" required
                 minLength="1" maxLength="5" placeholder="EMPTY"></input>
         </div>
         <div className="input__line">
