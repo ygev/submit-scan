@@ -100,6 +100,7 @@ input:valid {
         max-width: 50%;
         z-index: 2;
         margin-bottom: 20px;
+        /* height: 40px; */
     }
 
     .inputLine__wrapper {

@@ -1,6 +1,7 @@
 footer {
     background-color: var(--greenLight);
     height: 30px;
+    width: 100vw;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -15,7 +16,7 @@ footer {
     text-align: center;
     text-transform: uppercase;
     color: var(--black);
-    position: sticky;
+    position: fixed;
     bottom: 0;
     z-index: 3;
 }
