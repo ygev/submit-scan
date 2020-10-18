@@ -174,8 +174,34 @@ const updateRadarChart = function() {
 };
 
 function updatePage() {
-    updateRadarChart()
+    updateRadarChart();
     colorGreen();
+}
+
+
+function changeToEditStatsButton() {
+  console.log("changing to edit stats button....");
+  let diagnoseButton = document.getElementsByTagName("button")[0];
+  diagnoseButton.classList.remove("button__white");
+  diagnoseButton.classList.add("button__white", "button__default");
+  diagnoseButton.innerHTML = "<h3>Edit Stats</h3>";
+  diagnoseButton.addEventListener("click", diagnoseClicked)
+}
+
+function diagnoseClicked() {
+  let diagnoseButton = document.getElementsByTagName("button")[0];
+  document.getElementById("chartContainer").style.opacity = 1;
+  document.getElementById("inputContainer").style.opacity = 0;
+  changeToEditStatsButton();
+}
+
+function changeToDiagnoseButton() {
+  console.log("all is valid");
+  console.log("changing to diagnose button....");
+  let diagnoseButton = document.getElementsByTagName("button")[0];
+  diagnoseButton.classList.add("button__green", "button__default");
+  diagnoseButton.innerHTML = "<h3>Diagnose</h3>";
+  diagnoseButton.addEventListener("click", diagnoseClicked)
 }
 
 function colorGreen() {
@@ -192,11 +218,9 @@ function colorGreen() {
         }
     }
     if (allValid === true) {
-        console.log("all is valid")
-        document.getElementsByTagName("nav")[0].classList.add("glowOuter", "greenBorderRight");
-        document.getElementsByClassName("buttonLine")[0].classList.add("glowInner");
-        document.getElementsByTagName("button")[0].classList.add("button__green", "button__default");
-        document.getElementsByTagName("h3")[0].innerHTML = "Diagnose";
+      document.getElementsByTagName("nav")[0].classList.add("glowOuter", "greenBorderRight");
+      document.getElementsByClassName("buttonLine")[0].classList.add("glowInner");
+      changeToDiagnoseButton();
     }
 }
 
