@@ -1,0 +1,15 @@
+#chartGenerator{
+	width:100%;
+}
+
+#inputContainer{
+	position:absolute;
+	width:35%;
+}
+
+#chartContainer{
+	z-index:100;
+	width:80%;
+	margin:auto;
+	opacity:0.1;
+}
