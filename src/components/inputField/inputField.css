@@ -1,0 +1,119 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputLine__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.input__wrapper {
+    background-color: var(--black);
+    border: 1px var(--white) solid;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    border-radius: 100px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    transition: var(--transGlow);
+}
+
+input {
+    background: none;
+    border: none;
+    width: 100px;
+    height: 100%;
+    border-radius: 100px;
+}
+
+input:focus {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--black);
+    opacity: 1; /* Firefox */
+  }
+
+/* Default Input */
+.input--default {
+    background: var(--white);
+    color: var(--black);
+}
+
+.input--default:focus {
+    background: var(--white);
+    color: var(--black);
+    transition: var(--transGlow);
+}
+
+/* Filled Input */
+.input__wrapper--filled {
+    text-shadow: var(--medbayOuter);
+    background: var(--greenDark);
+    box-shadow: var(--medbayInner);
+    transition: var(--transGlow);
+}
+
+.input--filled, .input--filled:focus {
+    background: var(--greenLight);
+    color: var(--black);
+    box-shadow: var(--medbayOuter);
+    transition: var(--transGlow);
+}
+
+/* Line */
+.input__line {
+    width: 1px;
+    height: 20px;
+    background-color: var(--white);
+    transition: var(--transGlow);
+}
+
+input:valid {
+    background-color: var(--greenLight);
+    box-shadow: var(--medbayOuter);
+    transition: var(--transGlow);
+  }
+
+
+
+/* ---DESKTOP--- */
+@media only screen and (min-width: 768px){
+    aside {
+        grid-column: 2;
+        width: 50vw;
+        padding-top: 5vh;
+        padding-bottom: 2vh;
+    }
+
+    .input__wrapper {
+        max-width: 360px;
+        z-index: 2;
+        margin-bottom: 10px;
+        height: 32px;
+    }
+
+    .inputLine__wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    /* Line */
+    .input__line {
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        left: 0;
+        top: calc(65% - 20px);
+    }
+}
