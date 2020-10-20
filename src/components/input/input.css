@@ -2,6 +2,8 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center; 
+    justify-content: center;
 }
 
 .inputLine__wrapper {
@@ -92,7 +94,7 @@ input:valid {
     aside {
         grid-column: 2;
         width: 50vw;
-        padding-top: 5vh;
+        padding-top: 2vh;
         padding-bottom: 2vh;
     }
 

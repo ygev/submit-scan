@@ -22,7 +22,7 @@ const updateRadarChart = function() {
       gamesStarted: Number(document.getElementById("gamesStarted").value) || 2,
       gamesFinished: Number(document.getElementById("gamesFinished").value) || 2,
       imposterVoteWins: Number(document.getElementById("imposterVoteWins").value) || 0,
-      imposterKillWins: Number(document.getElementById("sabotageWins").value) || 0,
+      imposterKillWins: Number(document.getElementById("imposterSabotageWins").value) || 0,
       imposterSabotageWins: Number(document.getElementById("imposterSabotageWins").value) || 0,
       crewmateVoteWins: Number(document.getElementById("crewmateVoteWins").value) || 0,
       crewmateTaskWins: Number(document.getElementById("crewmateTaskWins").value) || 0,
@@ -190,8 +190,8 @@ function changeToEditStatsButton() {
 
 function diagnoseClicked() {
   let diagnoseButton = document.getElementsByTagName("button")[0];
-  document.getElementById("chartContainer").style.opacity = 1;
-  document.getElementById("inputContainer").style.opacity = 0;
+  document.getElementById("chartContainer").style.display = "block";
+  document.getElementById("inputContainer").style.display = "none";
   changeToEditStatsButton();
 }
 
