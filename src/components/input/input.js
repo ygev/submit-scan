@@ -6,6 +6,9 @@ import "../fonts/type.css"
 
 const updateRadarChart = function() {
     var Chart = require('chart.js');
+    Chart.defaults.global.defaultFontColor = 'white';
+    Chart.defaults.global.defaultFontFamily = 'LAN';
+
     var ctx = document.getElementById('myChart').getContext('2d');
     let playerData = {
       bodiesReported: Number(document.getElementById("bodiesReported").value) || 0,
@@ -26,11 +29,14 @@ const updateRadarChart = function() {
       imposterSabotageWins: Number(document.getElementById("imposterSabotageWins").value) || 0,
       crewmateVoteWins: Number(document.getElementById("crewmateVoteWins").value) || 0,
       crewmateTaskWins: Number(document.getElementById("crewmateTaskWins").value) || 0,
-      
-      graphLabels: ['Big Brain', 'Trustworthy', 'Deadly', 'Handy', 'Proactive'],
+
+   
+      graphLabels: ['BIG BRAIN', 'TRUSTWORTHY', 'DEADLY', 'HANDY', 'PROACTIVE'],
       graphMin:1,
       graphMax:100,
       graphStats: [1, 1, 1, 1, 1],
+      
+      
       //getters
        getCrewmateWinPercentage: function() {
         return ((this.crewmateVoteWins + this.crewmateTaskWins) / (this.timesCrewmate) * 100);
@@ -126,7 +132,7 @@ const updateRadarChart = function() {
             backgroundColor: 'rgba(37, 193, 110, 0.5)',
             borderColor:'rgba(37, 193, 110, 1)',
             lineTension: 0.05,
-            label:"Player Stats",
+            label:"PLAYER DIAGNOSIS",
             pointBackgroundColor: 'white'
           }
         ]
@@ -141,7 +147,7 @@ const updateRadarChart = function() {
                 angleLines: {
                     display: false
                 },
-                ticks: {
+                ticks: { // why the fuck doesnt this work, mom
                     display: false,
                     suggestedMin: this.graphMin,
                     suggestedMax: this.graphMax
@@ -172,6 +178,7 @@ const updateRadarChart = function() {
 
     updatePlayerData();
 };
+
 
 function updatePage() {
     updateRadarChart();
