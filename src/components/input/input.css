@@ -42,6 +42,11 @@ input:focus {
     outline: none;
 }
 
+button:focus {
+    border: none;
+    outline: none;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--black);
     opacity: 1; /* Firefox */

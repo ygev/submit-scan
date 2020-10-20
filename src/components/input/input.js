@@ -147,7 +147,7 @@ const updateRadarChart = function() {
                 angleLines: {
                     display: false
                 },
-                ticks: { // why the fuck doesnt this work, mom
+                ticks: { 
                     display: false,
                     suggestedMin: this.graphMin,
                     suggestedMax: this.graphMax
