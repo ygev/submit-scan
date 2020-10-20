@@ -10,7 +10,8 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .input__wrapper {
