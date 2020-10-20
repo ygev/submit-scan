@@ -139,6 +139,11 @@ const updateRadarChart = function() {
         ]
         }
         const testOptions = {
+            layout: {
+              padding: {
+                  left: 10
+              }
+          },
             scale: {
                 gridLines: {
                   display: true,
