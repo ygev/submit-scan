@@ -141,7 +141,7 @@ const updateRadarChart = function() {
         const testOptions = {
             layout: {
               padding: {
-                  left: 10
+                  left: 10 // Fixes the label being cut off by the frame.
               }
           },
             scale: {
