@@ -8,6 +8,7 @@ const updateRadarChart = function() {
     var Chart = require('chart.js');
     Chart.defaults.global.defaultFontColor = 'white';
     Chart.defaults.global.defaultFontFamily = 'LAN';
+    Chart.defaults.global.legend.display = false;
 
     var ctx = document.getElementById('myChart').getContext('2d');
     let playerData = {
