@@ -147,6 +147,9 @@ const updateRadarChart = function() {
                 angleLines: {
                     display: false
                 },
+                pointLabels: {
+                  fontSize: 16
+                },
                 ticks: { 
                     display: false,
                     suggestedMin: this.graphMin,
