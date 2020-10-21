@@ -35,6 +35,7 @@ h1 {
     line-height: 72px;
     text-align: center;
     text-shadow: var(--medbayOuter);
+    word-spacing: 40px;
 }
 
 /* Head */

@@ -77,6 +77,21 @@ button {
     transition: var(--transGlow);
 }
 
+.img__logo {
+    position: absolute;
+    height: 200px;
+    top: -70px;
+    padding-left: 30px;
+}
+
+.nav__txt--logo {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
 /* ---DESKTOP--- */
 @media only screen and (min-width: 768px){
     nav {
@@ -111,5 +126,11 @@ button {
         height: 1px;
         width: 50%;
         left: 50%;
+    }
+
+    .img__logo {
+        top: -110px;
+        padding-left: 45px;
+        height: 300px;
     }
   }

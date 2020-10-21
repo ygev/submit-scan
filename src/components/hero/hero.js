@@ -3,13 +3,17 @@ import "../global.css";
 import "../reset.css";
 import "./hero.css"
 import "../fonts/type.css"
+import logo from "../../images/glowie.png" 
 
 class Hero extends React.Component {
     render() {
         return (
             <nav>
                 <section className="nav__txt">
+                    <section className="nav__txt--logo">
+                    <img className="img__logo" src={logo} alt="Glowing Player"/> 
                     <h1>Submit Scan</h1>
+                    </section>
                     <h2>Among Us Diagnostics</h2>
                 </section>
                 <section className="buttonLine__wrapper">
