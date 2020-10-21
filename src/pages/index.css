@@ -22,6 +22,10 @@
 	margin-bottom: 32px;
 }
 
+#particles-js canvas {
+	position: absolute;
+	top:0;
+}
 
 /* ---DESKTOP--- */
 @media only screen and (min-width: 768px){
