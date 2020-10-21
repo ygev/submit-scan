@@ -29,7 +29,7 @@ body {
 }
 
 .bg-black {
-  background: radial-gradient(74.71% 111.2% at 50% 100%, #000000 0%, #000000 100%);
+  background: radial-gradient(74.71% 111.2% at 50% 100%, #000000 0%, #000000 0%);
   transition: var(--transGlow);
 }
 
@@ -63,4 +63,14 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.green-explosion {
+  animation: explode 1s ease-out;
+}
+
+@keyframes explode {
+  0% {  box-shadow: 0px 0px 10px 10px var(--greenDark), var(--medbayInner); }
+  50% { box-shadow: 0px 0px 200px 50px var(--greenDark), var(--medbayInner); }
+  100% { box-shadow: 0px 0px 10px 10px var(--greenDark), var(--medbayInner); }
 }

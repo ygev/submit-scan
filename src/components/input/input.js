@@ -215,7 +215,7 @@ function changeToDiagnoseButton() {
   console.log("all is valid");
   console.log("changing to diagnose button....");
   let diagnoseButton = document.getElementsByTagName("button")[0];
-  diagnoseButton.classList.add("button__green", "button__default");
+  diagnoseButton.classList.add("button__green", "button__default", "green-explosion");
   diagnoseButton.innerHTML = "<h3>Diagnose</h3>";
   diagnoseButton.addEventListener("click", diagnoseClicked)
 }
