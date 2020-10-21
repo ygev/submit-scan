@@ -12,7 +12,7 @@ class IndexPage extends React.Component {
     return (
       <>
         <SEO title="Submit Scan" />
-        <div className="flexer">
+        <div className="flexer bg-black">
           <Hero />
           <aside>
             <div id="chartGenerator">

@@ -100,8 +100,8 @@ input:valid {
     aside {
         grid-column: 2;
         width: 50vw;
-        padding-top: 2vh;
-        padding-bottom: 2vh;
+        padding-top: 1vh;
+        padding-bottom: 3vh;
     }
 
     .input__wrapper {
@@ -114,6 +114,7 @@ input:valid {
     .inputLine__wrapper {
         width: 100%;
         position: relative;
+        padding: 0;
     }
 
     /* Line */
@@ -122,6 +123,6 @@ input:valid {
         width: 50%;
         height: 1px;
         left: 0;
-        top: calc(65% - 20px);
+        top: calc(65% - 13px);
     }
 }
