@@ -25,6 +25,7 @@
 #particles-js canvas {
 	position: absolute;
 	top:0;
+	z-index: -3;
 }
 
 /* ---DESKTOP--- */

@@ -22,7 +22,7 @@ button {
     justify-items: center;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 10;
     transition: var(--transGlow);
 }
 
