@@ -50,7 +50,7 @@ class IndexPage extends React.Component {
                 params={{
                   "particles": {
                       "number": {
-                          "value": 60,
+                          "value": 160,
                           "density": {
                               "enable": true,
                               "value_area": 1500
@@ -58,14 +58,14 @@ class IndexPage extends React.Component {
                       },
                       "line_linked": {
                           "enable": true,
-                          "opacity": 0.02
+                          "opacity": 0.05
                       },
                       "move": {
                           "direction": "right",
                           "speed": 0.05
                       },
                       "size": {
-                          "value": 1
+                          "value": 1.25
                       },
                       "opacity": {
                           "anim": {
