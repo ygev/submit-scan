@@ -33,7 +33,6 @@ class IndexPage extends React.Component {
                 <Input id="imposterVoteWins" criterion="Impostor Vote Wins"/>
                 <Input id="imposterKillWins" criterion="Impostor Kill Wins"/>
                 <Input id="imposterSabotageWins" criterion="Impostor Sabotage Wins"/>
-                <Input id="sabotageWins" criterion="Sabotage Wins"/>
                 <Input id="crewmateVoteWins" criterion="Crewmate Vote Wins"/>
                 <Input id="crewmateTaskWins" criterion="Crewmate Task Wins"/>
               </div>

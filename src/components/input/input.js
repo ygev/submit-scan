@@ -195,51 +195,81 @@ function updatePage() {
 }
 
 
+//edit stats button
 function changeToEditStatsButton() {
-  console.log("changing to edit stats button....");
   let diagnoseButton = document.getElementsByTagName("button")[0];
-  diagnoseButton.classList.remove("button__white");
+
+  diagnoseButton.classList.remove("button__green", "button__default", "green-explosion");
   diagnoseButton.classList.add("button__white", "button__default");
   diagnoseButton.innerHTML = "<h3>Edit Stats</h3>";
-  diagnoseButton.addEventListener("click", diagnoseClicked)
+  diagnoseButton.removeEventListener("click", diagnoseClicked)
+  diagnoseButton.addEventListener("click", editStatsClicked)
 }
 
+function editStatsClicked() {
+  let diagnoseButton = document.getElementsByTagName("button")[0];
+  diagnoseButton.classList.remove("button__white", "button__default");
+  document.getElementById("chartContainer").style.display = "none";
+  document.getElementById("inputContainer").style.display = "block";
+  changeToDiagnoseButton();
+}
+
+// end edit stats button
+
+
+// diagnose button
 function diagnoseClicked() {
   let diagnoseButton = document.getElementsByTagName("button")[0];
   document.getElementById("chartContainer").style.display = "block";
   document.getElementById("inputContainer").style.display = "none";
   changeToEditStatsButton();
+  updateRadarChart();
 }
 
 function changeToDiagnoseButton() {
-  console.log("all is valid");
-  console.log("changing to diagnose button....");
   let diagnoseButton = document.getElementsByTagName("button")[0];
   diagnoseButton.classList.add("button__green", "button__default", "green-explosion");
   diagnoseButton.innerHTML = "<h3>Diagnose</h3>";
-  diagnoseButton.addEventListener("click", diagnoseClicked)
+  diagnoseButton.addEventListener("click", diagnoseClicked);
+}
+// end diagnose button
+
+function changeToEnterDataButton() {
+  let diagnoseButton = document.getElementsByTagName("button")[0];
+  diagnoseButton.classList.add("button__default");
+  diagnoseButton.classList.remove("button__green", "green-explosion");
+  diagnoseButton.innerHTML = "<h3>Enter Data</h3>";
+  diagnoseButton.removeEventListener("click", diagnoseClicked);
 }
 
 function colorGreen() {
-    var allValid = true;
-    for (var i = 0; i < 19; i++) {
-        var input = document.getElementsByTagName('input')[i];
-        if(input.checkValidity() === true){
-            console.log("onBlur Running")
-            document.getElementsByClassName("input__wrapper")[i].classList.add("input__wrapper--filled");
-            document.getElementsByClassName("input--default")[i].classList.add("input--filled");
-            document.getElementsByClassName("input__line")[i].classList.add("glowInner");
-        } else {
-            allValid = false;
-        }
+  var allValid = true;
+  for (var i = 0; i < document.getElementsByTagName("input").length; i++) {
+    var input = document.getElementsByTagName('input')[i];
+    if(input.checkValidity() === true){
+      document.getElementsByClassName("input__wrapper")[i].classList.add("input__wrapper--filled");
+      document.getElementsByClassName("input--default")[i].classList.add("input--filled");
+      document.getElementsByClassName("input__line")[i].classList.add("glowInner");
+    } else {
+      document.getElementsByClassName("input__wrapper")[i].classList.remove("input__wrapper--filled");
+      document.getElementsByClassName("input--default")[i].classList.remove("input--filled");
+      document.getElementsByClassName("input__line")[i].classList.remove("glowInner");
+      allValid = false;
     }
-    if (allValid === true) {
-      document.getElementsByTagName("nav")[0].classList.add("glowOuter", "greenBorderRight");
-      document.getElementsByClassName("buttonLine")[0].classList.add("glowInner");
-      document.getElementsByClassName("flexer")[0].classList.remove("bg-black");
-      document.getElementsByClassName("flexer")[0].classList.add("bg-green");
-      changeToDiagnoseButton();
-    }
+  }
+  if (allValid === true) {
+    document.getElementsByTagName("nav")[0].classList.add("glowOuter", "greenBorderRight");
+    document.getElementsByClassName("buttonLine")[0].classList.add("glowInner");
+    document.getElementsByClassName("flexer")[0].classList.remove("bg-black");
+    document.getElementsByClassName("flexer")[0].classList.add("bg-green");
+    changeToDiagnoseButton();
+  } else {
+    document.getElementsByTagName("nav")[0].classList.remove("glowOuter", "greenBorderRight");
+    document.getElementsByClassName("buttonLine")[0].classList.remove("glowInner");
+    document.getElementsByClassName("flexer")[0].classList.add("bg-black");
+    document.getElementsByClassName("flexer")[0].classList.remove("bg-green");
+    changeToEnterDataButton();
+  }
 }
 
 export default (props) => (
@@ -247,7 +277,7 @@ export default (props) => (
     <div className="inputLine__wrapper">
         <div className="input__wrapper">
             <label htmlFor="criterion"><h4>{props.criterion}</h4></label>
-            <input onBlur={updatePage} id={props.id} className="inputField input--default" type="number" name="criterion" required
+            <input onBlur={colorGreen} id={props.id} className="inputField input--default" type="number" name="criterion" required
                 minLength="1" maxLength="5" placeholder="EMPTY"></input>
         </div>
         <div className="input__line">
