@@ -26,6 +26,7 @@ body {
 
 .flexer {
   display: grid;
+  transition: var(--transGlow);
 }
 
 .bg-black {
