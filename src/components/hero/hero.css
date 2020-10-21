@@ -82,6 +82,7 @@ button {
     height: 200px;
     top: -70px;
     padding-left: 30px;
+    animation: float 5s ease-in-out infinite;
 }
 
 .nav__txt--logo {
@@ -133,4 +134,10 @@ button {
         padding-left: 45px;
         height: 300px;
     }
+  }
+
+  @keyframes float {
+    0% {  transform: translateY(5px);}
+    50% { transform: translateY(-5px);}
+    100% { transform: translateY(5px);}
   }
