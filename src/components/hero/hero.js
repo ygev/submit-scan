@@ -15,6 +15,7 @@ class Hero extends React.Component {
                     <h1>Submit Scan</h1>
                     </section>
                     <h2>Among Us Diagnostics</h2>
+                    <h4 className="nav__txt--summary">Fill out your game statistics to generate insight on the type of player you are in Among Us.</h4>
                 </section>
                 <section className="buttonLine__wrapper">
                     <button type="submit" className="button__default"><h3>Enter Data</h3></button>

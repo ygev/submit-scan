@@ -93,6 +93,15 @@ button {
     justify-items: center;
 }
 
+.nav__txt--summary {
+    text-transform: none;
+    line-height: 140%;
+    word-spacing: -0.5px;
+    margin-top: 24px;
+    text-align: center;
+    max-width: fit-content;
+}
+
 /* ---DESKTOP--- */
 @media only screen and (min-width: 768px){
     nav {
@@ -108,6 +117,10 @@ button {
     .nav__txt {
         margin-top: 0;
         margin-bottom: 50px;
+    }
+
+    .nav__txt--summary {
+        font-size: 16px;
     }
 
     .buttonLine__wrapper {
