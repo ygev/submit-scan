@@ -107,7 +107,7 @@ input:valid {
     .input__wrapper {
         max-width: 360px;
         z-index: 2;
-        margin-bottom: 10px;
+        margin-bottom: 1.3vh;
         height: 32px;
     }
 
