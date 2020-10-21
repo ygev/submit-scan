@@ -57,8 +57,7 @@ class IndexPage extends React.Component {
                           }
                       },
                       "line_linked": {
-                          "enable": true,
-                          "opacity": 0.05
+                          "enable": false
                       },
                       "move": {
                           "direction": "right",
