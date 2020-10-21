@@ -258,13 +258,13 @@ function colorGreen() {
     }
   }
   if (allValid === true) {
-    document.getElementsByTagName("nav")[0].classList.add("glowOuter", "greenBorderRight");
+    document.getElementsByTagName("nav")[0].classList.add("greenBorderRight");
     document.getElementsByClassName("buttonLine")[0].classList.add("glowInner");
     document.getElementsByClassName("flexer")[0].classList.remove("bg-black");
     document.getElementsByClassName("flexer")[0].classList.add("bg-green");
     changeToDiagnoseButton();
   } else {
-    document.getElementsByTagName("nav")[0].classList.remove("glowOuter", "greenBorderRight");
+    document.getElementsByTagName("nav")[0].classList.remove("greenBorderRight");
     document.getElementsByClassName("buttonLine")[0].classList.remove("glowInner");
     document.getElementsByClassName("flexer")[0].classList.add("bg-black");
     document.getElementsByClassName("flexer")[0].classList.remove("bg-green");
