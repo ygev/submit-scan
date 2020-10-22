@@ -63,6 +63,11 @@ button {
     transition: var(--transGlow);
 }
 
+.button__white:hover {
+    box-shadow: 0px 0px 50px 10px var(--greenDark), var(--medbayInner);
+    transition: var(--transGlow);
+}
+
 .buttonLine__wrapper {
     display: flex;
     flex-direction: column;
