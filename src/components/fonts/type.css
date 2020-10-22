@@ -131,6 +131,10 @@ p, .inputField {
         font-size: 16px;
     }
 
+    .percent__txt {
+        font-size: 13px
+    }
+
     .nav__txt--summary {
         font-size: 20px;
     }
