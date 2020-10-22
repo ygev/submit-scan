@@ -52,8 +52,16 @@ body {
 }
 
 .greenBorderRight {
-  border-right: 1px var(--greenLight) solid;
+  margin-bottom: 24px;
+  border-bottom: 1px var(--greenLight) solid;
   transition: var(--transGlow);
+}
+
+@media only screen and (min-width: 768px){
+  .greenBorderRight {
+    margin-bottom: 0;
+    border-right: 1px var(--greenLight) solid;
+  }
 }
 
 /* Chrome, Safari, Edge, Opera */

@@ -3,7 +3,6 @@
 }
 
 #inputContainer{
-	/* position:absolute; */
 	width:100%;
 }
 
@@ -29,7 +28,11 @@
 }
 
 /* ---DESKTOP--- */
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 1024px){
+	#chartContainer {
+		width: 60vh;
+	}
+
 	#inputContainer{
 		margin-bottom: 0;
 	}

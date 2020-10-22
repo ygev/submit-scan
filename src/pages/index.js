@@ -1,13 +1,18 @@
 import React from "react"
 import Hero  from "../components/hero/hero"
 import Input  from "../components/input/input"
+import Percent  from "../components/percent/percent"
 import Footer from "../components/footer/footer"
 import SEO from "../components/seo"
 import Particles from 'react-particles-js';
+import imgCrewmate from "../images/percent1_crewmate.png"
+import imgImpostor from "../images/percent2_impostor.png"
+import imgEjected from "../images/percent3_ejected.png"
+import imgKilled from "../images/percent4_killed.png"
+import imgCompleted from "../images/percent5_completed.png"
 import "./index.css"
 
 class IndexPage extends React.Component {
-// TODO make an function that makes <Input> with criteria being cycled through, maybe make line inline css
 
   render() {
     return (
@@ -39,6 +44,13 @@ class IndexPage extends React.Component {
               </div>
               <div id="chartContainer">
                 <canvas id="myChart" width="400" height="400"></canvas>
+                <div className="percent__wrapper">
+                <Percent percentNum="75%" percentTxt="Crewmate Wins" percentImg={imgCrewmate} />
+                <Percent percentNum="75%" percentTxt="Impostor Wins" percentImg={imgImpostor} />
+                <Percent percentNum="75%" percentTxt="Times Ejected" percentImg={imgEjected} />
+                <Percent percentNum="75%" percentTxt="Times Killed" percentImg={imgKilled} />
+                <Percent percentNum="75%" percentTxt="Games Completed" percentImg={imgCompleted} />
+                </div>
               </div>
             </div>
             
