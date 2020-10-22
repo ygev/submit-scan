@@ -115,3 +115,27 @@ p, .inputField {
         line-height: 14px;
     }
 }
+
+
+/* 2K COMPATIBILITY */
+@media only screen and (min-width: 2560px){
+    h1 {
+        font-size: 120px;
+    }
+
+    h2 {
+        line-height: 48px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    .nav__txt--summary {
+        font-size: 20px;
+    }
+
+    p, .inputField {
+        font-size: 24px;
+    }
+}

@@ -117,3 +117,9 @@ input:valid {
         top: calc(65% - 20px);
     }
 }
+/* 2K COMPATIBILITY */
+@media only screen and (min-width: 2560px){
+    p, .inputField {
+        font-size: 20px;
+    }
+}

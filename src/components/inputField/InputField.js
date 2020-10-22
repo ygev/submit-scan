@@ -1,8 +1,8 @@
 import React from "react";
 import "../global.css";
 import "../reset.css";
-import "./input.css"
 import "../fonts/type.css"
+import "./input.css"
 
 class inputField extends React.component {
     constructor() {
