@@ -3,7 +3,7 @@
 <br>
   <h3 align="center">Submit your scan and receive a diagnosis.</h3>
   <p align="center">
-    <a href="https://ygev.github.io/semaphore">
+    <a rel="noopener noreferrer" target="_blank" href="https://ygev.github.io/submit-scan">
       <img src="https://i.imgur.com/U1hVaXY.png" width="200" alt="Try it Out!">
     </a>
   </p>
