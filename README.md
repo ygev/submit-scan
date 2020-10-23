@@ -14,11 +14,11 @@ Submit Scan is an Among Us themed personality test, similar to Shindanmaker. It 
 
 ## What is the diagnosis and how is it calculated? 
 The diagnosis places you on a scale among six variables: 
-- **Big Brain** Based on impostor and crewmate wins compared to total games played.
-- **Trustworthy** Based on how little you get ejected.
-- **Deadly** Based on your kill statistics as impostor.
-- **Handy** Based on how many sabotages you fix per game, as well as tasks completed.
-- **Proactive** Based on emergencies called, as well as bodies reported.
+- **Big Brain** — Based on impostor and crewmate wins compared to total games played.
+- **Trustworthy** — Based on how little you get ejected.
+- **Deadly** — Based on your kill statistics as impostor.
+- **Handy** — Based on how many sabotages you fix per game, as well as tasks completed.
+- **Proactive** — Based on emergencies called, as well as bodies reported.
 
 ## What else is there? 
 In addition to a diagnosis, you will receive percentages on the following:
@@ -38,8 +38,11 @@ In addition to a diagnosis, you will receive percentages on the following:
 It will look like this:
 <img src="https://i.imgur.com/dhogrpa.png" width="500" alt="Among Us home screen with overlaid game statistics modal.">
 
-3. Enter the statistics from the game into the input fields on submitscan.net.
+3. Enter the statistics from the game into the input fields on submitscan.net. <br>
+<sup><b>Protip: </b>Use the Tab key to navigate between input fields.</sup>
 <img src="https://i.imgur.com/R9F9qPU.png" width="500" alt="Submit Scan home page with all the fields filled out">
 
 4. Once you have entered all the stats, press the newly activated Diagnose button and see your results:
 <img src="https://i.imgur.com/qrNvG3m.png" width="500" alt="The final diagnosis on the Submit Scan website.">
+
+<sup><b>⚠️ Inner Sloth, if you're reading this, please reveal where the stats are stored in the game files. so our patients can save some time entering data.</b></sup>
