@@ -1,7 +1,7 @@
 <h1 align="center">
   <img align="center" src="https://i.imgur.com/oaqpgWu.png" width="480" alt="icon">
 <br>
-  <h3 align="center">Input your Among Us game statistics to gain insight about what kind of player you are.</h3>
+  <h3 align="center">Submit your scan and receive a diagnosis.</h3>
   <p align="center">
     <a href="https://ygev.github.io/semaphore">
       <img src="https://i.imgur.com/U1hVaXY.png" width="200" alt="Try it Out!">
@@ -9,6 +9,7 @@
   </p>
 </h1>
   
+Submit Scan is an Among Us themed personality test, similar to Shindanmaker. It allows you to enter your in-game statistics and receive some insights about what kind of player you are. The primary diagnosis places you on a scale among six variables: **Big Brain**, **Trustworthy**, **Deadly**, **Handy**, **Proactive**. In addition to a diagnosis, you will receive statistics on your **Crewmate Win Rate**, **Impostor Win Rate**, **Ejection Rate**, **Murder Victim Rate**, **Games Completion Rate**.
 
 ## How To Submit Your Scan
 
@@ -23,5 +24,5 @@ It will look like this:
 3. Enter the statistics from the game into the input fields on submitscan.net.
 <img src="https://i.imgur.com/R9F9qPU.png" width="500" alt="Submit Scan home page with all the fields filled out">
 
-4. Once you have entered all the stats, press the newly activated Diagnose button.
+4. Once you have entered all the stats, press the newly activated Diagnose button and see your results:
 <img src="https://i.imgur.com/qrNvG3m.png" width="500" alt="The final diagnosis on the Submit Scan website.">
