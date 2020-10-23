@@ -8,8 +8,25 @@
     </a>
   </p>
 </h1>
-  
-Submit Scan is an Among Us themed personality test, similar to Shindanmaker. It allows you to enter your in-game statistics and receive some insights about what kind of player you are. The primary diagnosis places you on a scale among six variables: **Big Brain**, **Trustworthy**, **Deadly**, **Handy**, **Proactive**. In addition to a diagnosis, you will receive statistics on your **Crewmate Win Rate**, **Impostor Win Rate**, **Ejection Rate**, **Murder Victim Rate**, **Games Completion Rate**.
+
+## What is Submit Scan?
+Submit Scan is an Among Us themed personality test, similar to Shindanmaker. It allows you to enter your in-game statistics and receive some insights about what kind of player you are. 
+
+## What is the diagnosis and how is it calculated? 
+The diagnosis places you on a scale among six variables: 
+- **Big Brain** Based on impostor and crewmate wins compared to total games played.
+- **Trustworthy** Based on how little you get ejected.
+- **Deadly** Based on your kill statistics as impostor.
+- **Handy** Based on how many sabotages you fix per game, as well as tasks completed.
+- **Proactive** Based on emergencies called, as well as bodies reported.
+
+## What else is there? 
+In addition to a diagnosis, you will receive percentages on the following:
+- **Crewmate Win Rate**
+- **Impostor Win Rate**
+- **Ejection Rate**
+- **Murder Victim Rate**
+- **Games Completion Rate**.
 
 ## How To Submit Your Scan
 
