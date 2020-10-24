@@ -32,7 +32,7 @@ body {
 .bg-black {
   background: radial-gradient(74.71% 111.2% at 50% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%);
   transition: var(--transGlow);
-  z-index: -4;
+  z-index: 4;
 }
 
 .bg-green {

@@ -4,7 +4,7 @@ import Input  from "../components/input/input"
 import Percent  from "../components/percent/percent"
 import Footer from "../components/footer/footer"
 import SEO from "../components/seo"
-import Particles from 'react-particles-js';
+import Particles from 'react-particles-js'
 import imgCrewmate from "../images/percent1_crewmate.png"
 import imgImpostor from "../images/percent2_impostor.png"
 import imgEjected from "../images/percent3_ejected.png"

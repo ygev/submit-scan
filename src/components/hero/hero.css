@@ -88,6 +88,7 @@ button {
     top: -70px;
     padding-left: 30px;
     animation: float 5s ease-in-out infinite;
+    z-index: -1;
 }
 
 .nav__txt--logo {
@@ -99,12 +100,20 @@ button {
 }
 
 .nav__txt--summary {
+    display: inline-block;
     text-transform: none;
     line-height: 140%;
     word-spacing: -0.5px;
     margin-top: 24px;
     text-align: center;
     max-width: fit-content;
+}
+
+.nav__txt--tooltip {
+    cursor: help;
+    display: inline;
+    color: var(--greenLight);
+    text-decoration: underline;
 }
 
 /* ---DESKTOP--- */
