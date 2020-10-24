@@ -152,6 +152,8 @@ const updateRadarChart = function() {
       ]
       }
       const testOptions = {
+        tooltips: {enabled: false},
+        hover: {mode: null},
         layout: {
           padding: {
             left: 10 // Fixes the label being cut off by the frame.
@@ -280,14 +282,14 @@ function colorGreen() {
   if (allValid === true) {
     document.getElementsByTagName("nav")[0].classList.add("greenBorderRight");
     document.getElementsByClassName("buttonLine")[0].classList.add("glowInner");
-    document.getElementsByClassName("flexer")[0].classList.remove("bg-black");
-    document.getElementsByClassName("flexer")[0].classList.add("bg-green");
+    document.getElementsByTagName("header")[0].classList.remove("bg-black");
+    document.getElementsByTagName("header")[0].classList.add("bg-green");
     changeToDiagnoseButton();
   } else {
     document.getElementsByTagName("nav")[0].classList.remove("greenBorderRight");
     document.getElementsByClassName("buttonLine")[0].classList.remove("glowInner");
-    document.getElementsByClassName("flexer")[0].classList.add("bg-black");
-    document.getElementsByClassName("flexer")[0].classList.remove("bg-green");
+    document.getElementsByTagName("header")[0].classList.add("bg-black");
+    document.getElementsByTagName("header")[0].classList.remove("bg-green");
     changeToEnterDataButton();
   }
 }

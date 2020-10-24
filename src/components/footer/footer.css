@@ -23,6 +23,10 @@ footer {
     letter-spacing:1px;
 }
 
+a:focus {
+    outline: none;
+}
+
 footer a {
     color: var(--black);
     text-decoration: underline;
