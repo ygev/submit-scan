@@ -299,7 +299,7 @@ export default (props) => (
   <div className="inputLine__wrapper">
       <div className="input__wrapper">
           <label htmlFor="criterion"><h4>{props.criterion}</h4></label>
-          <input onBlur={colorGreen} id={props.id} className="inputField input--default" type="number" name="criterion" required
+          <input onBlur={colorGreen} id={props.id} className="inputField input--default" type="number" inputMode="decimal" name="criterion" required
               minLength="1" maxLength="5" placeholder="EMPTY"></input>
       </div>
       <div className="input__line">
