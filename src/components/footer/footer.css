@@ -19,6 +19,19 @@ footer {
     position: fixed;
     bottom: 0;
     z-index: 3;
+    font-weight: bold;
+    letter-spacing:1px;
+}
+
+footer a {
+    color: var(--black);
+    text-decoration: underline;
+    transition: var(--transGlow);
+}
+
+footer a:hover {
+    text-decoration: none;
+    transition: var(--transGlow);
 }
 
 .footer__link,
