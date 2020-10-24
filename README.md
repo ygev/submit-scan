@@ -35,7 +35,7 @@ In addition to a diagnosis, you will receive percentages on the following:
 
 2. On the home screen of your game, click the "Game Stats" icon that looks like a bar chart.
 <img src="https://i.imgur.com/xOs9lgI.png" width="500" alt="Among Us home screen with the Game Stats button pointed out.">
-It will look like this:
+What will pop up is a modal like this with all your stats:
 <img src="https://i.imgur.com/dhogrpa.png" width="500" alt="Among Us home screen with overlaid game statistics modal.">
 
 3. Enter the statistics from the game into the input fields on submitscan.net. <br>
