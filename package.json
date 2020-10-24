@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "among-us-stats",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Input your Among Us stats and receive insight on what kind of player you are.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Tim Williams & Yana Gevorgyan <ygis@mit.edu",
   "dependencies": {
     "chart.js": "^2.9.3",
     "gatsby": "^2.24.74",
@@ -43,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/ygev/submit-scan"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/ygev/submit-scan/issues"
   }
 }

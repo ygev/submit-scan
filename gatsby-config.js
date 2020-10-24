@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Among Us Stats`,
+        short_name: `stats`,
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#000000`,
