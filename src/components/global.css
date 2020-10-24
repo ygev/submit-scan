@@ -12,7 +12,8 @@
   }
   
 ::selection {
-  background: var(--greenLight);
+  background: var(--black);
+  color: var(--white);
 }
 
 html {

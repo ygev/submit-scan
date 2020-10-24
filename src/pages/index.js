@@ -49,7 +49,7 @@ class IndexPage extends React.Component {
                 <Percent id="imposterWinPercentage" percentNum="75%" percentTxt="Impostor Win Rate" percentImg={imgImpostor} />
                 <Percent id="timesEjectedPercentage" percentNum="75%" percentTxt="Ejection Rate" percentImg={imgEjected} />
                 <Percent id="timesMurderedPercentage" percentNum="75%" percentTxt="Murdered Rate" percentImg={imgKilled} />
-                <Percent id="gamesCompletedPercentage" percentNum="75%" percentTxt="Games Completed Rate" percentImg={imgCompleted} />
+                <Percent id="gamesCompletedPercentage" percentNum="75%" percentTxt="Games Completed" percentImg={imgCompleted} />
                 </div>
               </div>
             </div>
