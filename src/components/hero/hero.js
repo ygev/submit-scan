@@ -16,7 +16,7 @@ class Hero extends React.Component {
                     <img className="img__logo" src={logo} alt="Glowing Player"/> 
                     <h1>Submit Scan</h1>
                     </section>
-                    <h2>Among Us Diagnostics</h2>
+                    <h2>Among Us Diagnosis</h2>
                     <h4 className="nav__txt--summary">Fill out your <span data-tip="React-tooltip" className="nav__txt--tooltip">game statistics</span> to generate insight on the type of player you are in Among Us.</h4>
                     <ReactTooltip backgroundColor='#000000' border={true} effect='float'>
                         <img src={tooltip} width="500"/>
