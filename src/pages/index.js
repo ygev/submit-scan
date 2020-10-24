@@ -45,11 +45,11 @@ class IndexPage extends React.Component {
               <div id="chartContainer">
                 <canvas id="myChart" width="400" height="400"></canvas>
                 <div className="percent__wrapper">
-                <Percent percentNum="75%" percentTxt="Crewmate Wins" percentImg={imgCrewmate} />
-                <Percent percentNum="75%" percentTxt="Impostor Wins" percentImg={imgImpostor} />
-                <Percent percentNum="75%" percentTxt="Times Ejected" percentImg={imgEjected} />
-                <Percent percentNum="75%" percentTxt="Times Killed" percentImg={imgKilled} />
-                <Percent percentNum="75%" percentTxt="Games Completed" percentImg={imgCompleted} />
+                <Percent id="crewmateWinPercentage" percentNum="75%" percentTxt="Crewmate Win Rate" percentImg={imgCrewmate} />
+                <Percent id="imposterWinPercentage" percentNum="75%" percentTxt="Impostor Win Rate" percentImg={imgImpostor} />
+                <Percent id="timesEjectedPercentage" percentNum="75%" percentTxt="Ejection Rate" percentImg={imgEjected} />
+                <Percent id="timesMurderedPercentage" percentNum="75%" percentTxt="Murdered Rate" percentImg={imgKilled} />
+                <Percent id="gamesCompletedPercentage" percentNum="75%" percentTxt="Games Completed Rate" percentImg={imgCompleted} />
                 </div>
               </div>
             </div>
