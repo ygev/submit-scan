@@ -31,7 +31,7 @@ body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 100vh;
   width: 100vw;
@@ -67,7 +67,7 @@ header {
   transition: var(--transGlow);
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 1024px){
   .greenBorderRight {
     margin-bottom: 0;
     border-right: 1px var(--greenLight) solid;

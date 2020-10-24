@@ -56,7 +56,7 @@
     text-transform: capitalize;
 }
 
- @media only screen and (min-width: 1024px){
+ @media only screen and (min-width: 1280px){
      .percent__wrapper {
         width: 100%;
         margin: 0;

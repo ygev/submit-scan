@@ -96,7 +96,7 @@ input:valid {
 
 
 /* ---DESKTOP--- */
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 1024px){
     aside {
         grid-column: 2;
         width: 50vw;
