@@ -11,7 +11,7 @@ import imgEjected from "../images/percent3_ejected.png"
 import imgKilled from "../images/percent4_killed.png"
 import imgCompleted from "../images/percent5_completed.png"
 import "./index.css"
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
 
 class IndexPage extends React.Component {
 
@@ -20,7 +20,7 @@ class IndexPage extends React.Component {
       <>
         <SEO title="Submit Scan" />
         <header className="bg-black"></header>
-        <Fade>
+        {/* <Fade> */}
         <div className="flexer ">
           <Hero />
           <aside>
@@ -60,7 +60,7 @@ class IndexPage extends React.Component {
           </aside>
         </div>
         <Footer />
-        </Fade>
+        {/* </Fade> */}
         <div id="particles-js">
         <Particles
                 params={{
