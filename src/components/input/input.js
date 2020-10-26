@@ -125,16 +125,33 @@ const updateRadarChart = function() {
     },
     
     getTrustLevel: function() {
-      const maxPercentage = 75;
+      //crewmate calcs
+      const maxPercentage = 70;
       const scaleFactor = (100 / maxPercentage);
+      const crewmateWeight = this.getCrewmateWinPercentage() >= maxPercentage ? maxPercentage : this.getCrewmateWinPercentage()
+      const finalCrewmateWeight = ((crewmateWeight * scaleFactor) * 1.03); // max 100
+      
+      //ejection calcs
+      const maxEjectionPercent = 30;
+      const ejectionScaling = 100/maxEjectionPercent;
+      const ejectionWeight = this.getEjectionPercentage() >= maxEjectionPercent ? maxEjectionPercent : this.getEjectionPercentage();
+      const finalEjectionWeight = ((ejectionWeight * ejectionScaling) / 5); //max 20
+   
+      //imposter calcs
       const timesImposterPercentage = ((this.timesImposter / this.gamesStarted) * 100);
-      const timesImposterWeight = timesImposterPercentage >= maxPercentage ? maxPercentage : timesImposterPercentage; 
+      const maxImposterPercent = 30;
+      const imposterScaling = 100/maxImposterPercent;
+      const imposterWeight = timesImposterPercentage >= maxImposterPercent ? maxImposterPercent : timesImposterPercentage;
+      const finalImposterWeight = ((imposterWeight * imposterScaling) /5); //max 20
+      console.log("finalImposterWeight");
+      console.log(finalImposterWeight);
 
-      const goodLevel = ( (this.getCrewmateWinPercentage() * scaleFactor) * 1.2 ); //max 120
-      const badLevel = 0; //max 40
-      const finalTrustLevel = (goodLevel - badLevel) 
+      //final calcs
+      const goodLevel = finalCrewmateWeight;
+      const badLevel = (finalEjectionWeight + finalImposterWeight); //max 40
+      const finalTrustLevel = (goodLevel - badLevel);
       this.graphStats[1] = Math.min(finalTrustLevel, this.graphMax);
-      return this.graphStats[0];
+      return this.graphStats[1];
     },
     
     updateGraph: function(){
