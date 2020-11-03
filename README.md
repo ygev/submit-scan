@@ -15,10 +15,10 @@ Submit Scan is an Among Us themed personality test, similar to Shindanmaker. It 
 ## What is the diagnosis and how is it calculated? 
 The diagnosis places you on a scale among six variables: 
 - **Big Brain** — Based on impostor and crewmate wins compared to total games played.
-- **Trustworthy** — Based on how little you get ejected.
+- **Not Sus** — Based on how little you get ejected.
 - **Deadly** — Based on your kill statistics as impostor.
 - **Handy** — Based on how many sabotages you fix per game, as well as tasks completed.
-- **Proactive** — Based on emergencies called, as well as bodies reported.
+- **Vigilant** — Based on emergencies called, as well as bodies reported.
 
 ## What else is there? 
 In addition to a diagnosis, you will receive percentages on the following:
